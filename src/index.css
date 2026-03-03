@@ -1,0 +1,126 @@
+/* ================= RESET ================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+/* ================= BODY ================= */
+body{
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #f5f3ff 0%, #ffffff 100%);
+  color:#111827;
+  line-height:1.6;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ===== Background Glow Effect ===== */
+body::before{
+  content: "";
+  position: fixed;
+  top: 10%;
+  left: -150px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #c4b5fd 0%, transparent 70%);
+  filter: blur(120px);
+  z-index: -1;
+}
+
+body::after{
+  content: "";
+  position: fixed;
+  bottom: 10%;
+  right: -150px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #ddd6fe 0%, transparent 70%);
+  filter: blur(120px);
+  z-index: -1;
+}
+
+/* ================= CONTAINER SYSTEM ================= */
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:0 40px;
+}
+
+/* ================= SECTION SPACING ================= */
+.section{
+  padding:100px 0;
+  border-bottom:1px solid rgba(124, 58, 237, 0.08);
+}
+
+/* ================= TYPOGRAPHY SCALE ================= */
+h1{
+  font-size:48px;
+  font-weight:700;
+}
+
+h2{
+  font-size:36px;
+  font-weight:600;
+}
+
+h3{
+  font-size:24px;
+  font-weight:600;
+}
+
+p{
+  font-size:16px;
+  color:#4b5563;
+}
+
+/* ================= BUTTON SYSTEM ================= */
+.btn-primary{
+  background:#7c3aed;
+  color:white;
+  padding:12px 22px;
+  border-radius:8px;
+  border:none;
+  cursor:pointer;
+  transition:all 0.3s ease;
+}
+
+.btn-primary:hover{
+  background:#6d28d9;
+  transform:translateY(-3px);
+  box-shadow:0 10px 30px rgba(124, 58, 237, 0.35);
+}
+
+/* ================= CARD SYSTEM ================= */
+.card{
+  background:white;
+  border:1px solid #e5e7eb;
+  border-radius:14px;
+  padding:25px;
+  transition:all 0.3s ease;
+}
+
+.card:hover{
+  box-shadow:0 15px 35px rgba(124, 58, 237, 0.15);
+  transform:translateY(-8px);
+}
+
+/* ================= HERO IMAGE FLOAT ================= */
+.hero-image{
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%{ transform:translateY(0px); }
+  50%{ transform:translateY(-10px); }
+  100%{ transform:translateY(0px); }
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px){
+  h1{ font-size:32px; }
+  h2{ font-size:26px; }
+  .section{ padding:70px 0; }
+  .container{ padding:0 20px; }
+}

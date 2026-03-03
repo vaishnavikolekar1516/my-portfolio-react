@@ -1,0 +1,75 @@
+/* ================= OVERLAY ================= */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.55); /* soft dark blur */
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+/* ================= MODAL BOX ================= */
+
+.box {
+  background: #ffffff;
+  padding: 50px 60px;
+  border-radius: 24px;
+  text-align: center;
+  min-width: 320px;
+  max-width: 420px;
+  border: 1px solid rgba(167, 139, 250, 0.25);
+  box-shadow: 0 30px 70px rgba(124, 58, 237, 0.15);
+  animation: scaleIn 0.3s ease;
+}
+
+/* ================= TITLE ================= */
+
+.box h2 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 15px;
+}
+
+/* ================= MESSAGE ================= */
+
+.box p {
+  font-size: 16px;
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+/* ================= BUTTON ================= */
+
+.box button {
+  padding: 12px 28px;
+  border: none;
+  background: linear-gradient(135deg, #7c3aed, #a78bfa);
+  color: white;
+  border-radius: 40px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.box button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(124, 58, 237, 0.25);
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
