@@ -1,7 +1,7 @@
 /* ================= SECTION ================= */
 
 .about-section {
-  padding: 140px 8%;
+  padding: 100px 8% 60px 8%;
   background: linear-gradient(180deg, #ffffff 0%, #f3f0ff 100%);
   position: relative;
   overflow: hidden;

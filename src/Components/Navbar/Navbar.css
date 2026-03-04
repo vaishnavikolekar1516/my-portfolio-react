@@ -28,7 +28,7 @@
   align-items: center;
   justify-content: space-between;
   height: 80px;              /* Reduced from 90 */
-  padding: 40px 30px;             /* Reduced side padding */
+  padding: 100px 8% 60px 8%;           /* Reduced side padding */
 }
 
 /* ================= LOGO ================= */
