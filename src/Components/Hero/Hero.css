@@ -64,8 +64,7 @@
   z-index: 2;
   gap: 80px;
 
-  /* ✅ IMAGE LEFT, CONTENT RIGHT */
-  flex-direction: row;
+  flex-direction: row-reverse; /* ✅ THIS */
 }
 
 /* ================= CONTENT ================= */
