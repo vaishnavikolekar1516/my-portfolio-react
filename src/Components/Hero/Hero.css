@@ -42,10 +42,10 @@
 
 .hero-bg-text {
   position: absolute;
-  font-size: 180px;
+  font-size: 160px;
   font-weight: 800;
   color: rgba(124, 58, 237, 0.05);
-  top: 45%;
+  top: 50%;
   right: 10%;
   transform: translateY(-50%);
   pointer-events: none;
@@ -59,17 +59,21 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1300px;
+  max-width: 1100px;
   margin: auto;
   z-index: 2;
   gap: 80px;
-  flex-direction: row-reverse;
+
+  /* ✅ IMAGE LEFT, CONTENT RIGHT */
+  flex-direction: row;
 }
 
 /* ================= CONTENT ================= */
 
 .hero-content {
   max-width: 600px;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ===== AVAILABILITY BADGE ===== */
@@ -125,32 +129,7 @@
 .hero-description {
   line-height: 1.7;
   color: #6b7280;
-  margin-bottom: 25px;
-}
-
-/* ===== TECH TAGS ===== */
-
-.hero-tech {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 35px;
-}
-
-.hero-tech span {
-  background: rgba(124, 58, 237, 0.08);
-  color: #5b21b6;
-  padding: 8px 14px;
-  border-radius: 30px;
-  font-size: 13px;
-  font-weight: 500;
-  border: 1px solid rgba(124, 58, 237, 0.15);
-  transition: 0.3s ease;
-}
-
-.hero-tech span:hover {
-  background: rgba(124, 58, 237, 0.15);
-  transform: translateY(-3px);
+  margin-bottom: 30px;
 }
 
 /* ================= BUTTONS ================= */
@@ -199,17 +178,13 @@
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(20px);
   box-shadow: 0 30px 60px rgba(124, 58, 237, 0.2);
-  transform: rotate(-3deg);
   transition: 0.4s ease;
-}
-
-.hero-image-card:hover {
-  transform: rotate(0deg) scale(1.05);
 }
 
 .hero-image-card img {
   width: 340px;
   border-radius: 20px;
+  display: block;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -218,29 +193,15 @@
   .hero-container {
     flex-direction: column;
     text-align: center;
-  }
-
-  /* 👇 This controls order */
-  .hero-image-card {
-    order: 1;
-    margin-top: 0;
-    margin-bottom: 30px;
-  }
-
-  .hero-content {
-    order: 2;
+    gap: 40px;
   }
 
   .hero-buttons {
     justify-content: center;
   }
 
-  .hero-tech {
-    justify-content: center;
-  }
-
   .hero-bg-text {
-    font-size: 100px;
+    font-size: 90px;
     top: 30%;
     right: 50%;
     transform: translate(50%, -50%);
