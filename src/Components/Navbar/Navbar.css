@@ -48,7 +48,7 @@
   display: flex;
   align-items: center;
   list-style: none;
-  gap: 35px;                 /* Reduced spacing */
+  gap: 39px;                 /* Reduced spacing */
   font-size: 17px;           /* Increased font */
   font-weight: 500;
 }
