@@ -58,7 +58,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 100px;
+  gap: 80px;
   position: relative;
   z-index: 2;
 }

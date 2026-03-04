@@ -81,8 +81,8 @@ import React, { useState } from "react";
 import "./Navbar.css";
 import logo from "../../assets/logo_img.png";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import menu_open from "../../assets/menu_open.svg";
-import menu_close from "../../assets/menu_close.svg";
+import menu_open from "../../assets/menu_open.png";
+import menu_close from "../../assets/menu_close.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
