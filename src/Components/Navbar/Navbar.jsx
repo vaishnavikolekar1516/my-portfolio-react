@@ -77,7 +77,7 @@
 
 
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./Navbar.css";
 import logo from "../../assets/logo_img.png";
 import AnchorLink from "react-anchor-link-smooth-scroll";
