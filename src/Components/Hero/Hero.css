@@ -72,6 +72,7 @@
   max-width: 550px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 /* ===== AVAILABILITY BADGE ===== */
@@ -109,6 +110,7 @@
   font-weight: 800;
   line-height: 1.1;
   color: #1f2937;
+  align-items: center;
 }
 
 .hero-title span {
@@ -116,6 +118,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  align-items: center;
 }
 
 .hero-role {
@@ -123,6 +126,7 @@
   font-size: 24px;
   font-weight: 600;
   color: #4b5563;
+  align-items: center;
 }
 
 .hero-description {
@@ -130,6 +134,7 @@
   line-height: 1.6;
   color: #6b7280;
   margin-bottom: 22px;
+  align-items: center;
 }
 
 /* ================= BUTTONS ================= */
