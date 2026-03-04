@@ -7,6 +7,7 @@
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(15px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  overflow-x: hidden; /* ✅ Prevent horizontal scroll */
 }
 
 /* Gradient bottom line */
@@ -27,8 +28,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;              /* Reduced from 90 */
-  padding: 0 30px;            /* Reduced side padding */
+  height: 80px;
+  padding: 0 30px;   /* ✅ FIXED (removed 40px vertical padding) */
+  box-sizing: border-box;
 }
 
 /* ================= LOGO ================= */
@@ -48,8 +50,8 @@
   display: flex;
   align-items: center;
   list-style: none;
-  gap: 39px;                 /* Reduced spacing */
-  font-size: 17px;           /* Increased font */
+  gap: 39px;
+  font-size: 17px;
   font-weight: 500;
 }
 
@@ -61,7 +63,6 @@
 }
 
 /* Underline animation */
-
 .nav-menu a::after {
   content: "";
   position: absolute;
@@ -111,10 +112,13 @@
 
 @media (max-width: 768px) {
 
+  body {
+    overflow-x: hidden; /* ✅ Prevent page scroll */
+  }
+
   .navbar {
     height: 65px;
     padding: 0 5%;
-    box-sizing: border-box;
   }
 
   .nav-btn {
@@ -128,19 +132,11 @@
   }
 
   .nav-menu a {
-  color: #000;        /* Force black text */
-}
+    color: #000;
+  }
 
-.nav-menu a:hover {
-  color: #7c3aed;     /* Keep purple hover */
-}
-
-/* .navbar-wrapper {
-    overflow-x: hidden;       /* ✅ Stop horizontal scroll */
-  } */
-
-  body {
-    overflow-x: hidden;       /* ✅ Safety fix */
+  .nav-menu a:hover {
+    color: #7c3aed;
   }
 
   .nav-menu {
@@ -157,10 +153,9 @@
     padding-left: 30px;
     transition: right 0.4s ease;
     box-shadow: -10px 0 40px rgba(0, 0, 0, 0.08);
-    font-size: 18px;      /* Bigger mobile font */
+    font-size: 18px;
   }
 
-  /* When menu opens */
   .nav-menu.active {
     right: 0;
   }
@@ -173,3 +168,4 @@
     width: 22px;
     cursor: pointer;
   }
+}
