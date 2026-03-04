@@ -2,7 +2,7 @@
 
 .footer-section {
   background: linear-gradient(180deg, #f8f6ff 0%, #ffffff 100%);
-  padding: 90px 8% 40px;   /* reduced space */
+  padding: 50px 50px;   /* reduced space */
   position: relative;
   overflow: hidden;
 }
