@@ -53,8 +53,23 @@
 import React from "react";
 import "./Hero.css";
 import profileImg from "../../assets/profile_img2.png";
+import profileImg1 from "../../assets/profile_img3.jpeg";
+import profileImg2 from "../../assets/profile_img4.jpeg";
 
 const Hero = () => {
+
+  const images = [profileImg, profileImg1, profileImg2];
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 3000); // change every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+
   return (
     <section className="hero-section" id="home">
       <div className="hero-bg-text">DEVELOPER</div>
@@ -117,7 +132,15 @@ const Hero = () => {
         </div>
 
         <div className="hero-image-card">
-          <img src={profileImg} alt="Vaishnavi" />
+          {/* <img src={profileImg} alt="Vaishnavi" /> */}
+
+          <img
+            key={current}
+            src={images[current]}
+            alt="Vaishnavi"
+            className="hero-slide-image"
+          />
+          
         </div>
 
       </div>
