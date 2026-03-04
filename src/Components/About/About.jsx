@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import profile_img1 from "../../assets/profile_img1.png";
+import profile_img1 from "../../assets/profile_img5.png";
 import { FaHtml5, FaJsSquare, FaReact, FaNodeJs } from "react-icons/fa";
 import { SiMongodb, SiExpress } from "react-icons/si";
 
