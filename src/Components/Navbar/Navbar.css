@@ -34,7 +34,7 @@
 /* ================= LOGO ================= */
 
 .logo-img {
-  height: 50px;
+  height: 80px;
   transition: 0.3s ease;
 }
 
@@ -124,6 +124,7 @@
     display: block;
     height: 24px;
     cursor: pointer;
+    color: #111827;
   }
 
   .nav-menu {
@@ -155,5 +156,6 @@
     top: 25px;
     width: 22px;
     cursor: pointer;
+    color: #111827;
   }
 }
