@@ -110,10 +110,12 @@
 
 /* ================= MOBILE ================= */
 
+/* ================= MOBILE ================= */
+
 @media (max-width: 768px) {
 
   body {
-    overflow-x: hidden; /* ✅ Prevent page scroll */
+    overflow-x: hidden;
   }
 
   .navbar {
@@ -129,35 +131,27 @@
     display: block;
     height: 24px;
     cursor: pointer;
-  }
-
-  .nav-menu a {
-    color: #000;
-  }
-
-  .nav-menu a:hover {
-    color: #7c3aed;
+    z-index: 1100;
   }
 
   .nav-menu {
     position: fixed;
     top: 0;
-    right: -100%;
+    right: -260px;          /* ✅ Use exact width */
+    width: 260px;
+    height: 100vh;
+    background: #ffffff;
     flex-direction: column;
     align-items: flex-start;
     gap: 30px;
-    background: white;
-    width: 260px;
-    height: 100vh;
-    padding-top: 100px;
-    padding-left: 30px;
-    transition: right 0.4s ease;
+    padding: 100px 30px;
     box-shadow: -10px 0 40px rgba(0, 0, 0, 0.08);
-    font-size: 18px;
+    transition: right 0.4s ease;
+    z-index: 1050;          /* ✅ Important */
   }
 
   .nav-menu.active {
-    right: 0;
+    right: 0;               /* ✅ Slide in */
   }
 
   .nav-mob-close {
@@ -168,4 +162,5 @@
     width: 22px;
     cursor: pointer;
   }
+
 }

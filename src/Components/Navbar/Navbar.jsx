@@ -77,76 +77,6 @@
 
 
 
-// import React, { useState } from "react";
-// import "./Navbar.css";
-// import logo from "../../assets/logo_img.png";
-// import AnchorLink from "react-anchor-link-smooth-scroll";
-// import menu_open from "../../assets/menu_open.png";
-// import menu_close from "../../assets/menu_close.png";
-
-// const Navbar = () => {
-//   const [isOpen, setIsOpen] = useState(false);
-
-//   const closeMenu = () => setIsOpen(false);
-
-//   return (
-//     <header className="navbar-wrapper">
-//       <div className="container navbar">
-
-//         <img className="logo-img" src={logo} alt="Logo" />
-
-//         {/* Mobile Open Icon */}
-//         <img
-//           src={menu_open}
-//           alt="menu"
-//           className="nav-mob-open"
-//           onClick={() => setIsOpen(true)}
-//         />
-
-//         {/* Menu */}
-//         <ul className={`nav-menu ${isOpen ? "active" : ""}`}>
-//           <img
-//             src={menu_close}
-//             alt="close"
-//             className="nav-mob-close"
-//             onClick={closeMenu}
-//           />
-
-//           <li>
-//             <AnchorLink offset={70} href="#home" onClick={closeMenu}>
-//               Home
-//             </AnchorLink>
-//           </li>
-
-//           <li>
-//             <AnchorLink offset={70} href="#about" onClick={closeMenu}>
-//               About
-//             </AnchorLink>
-//           </li>
-
-//           <li>
-//             <AnchorLink offset={70} href="#work" onClick={closeMenu}>
-//               Projects
-//             </AnchorLink>
-//           </li>
-
-//           <li>
-//             <AnchorLink offset={70} href="#contact" onClick={closeMenu}>
-//               Contact
-//             </AnchorLink>
-//           </li>
-//         </ul>
-
-//         <AnchorLink offset={70} href="#contact" className="nav-btn">
-//           Connect With Me
-//         </AnchorLink>
-//       </div>
-//     </header>
-//   );
-// };
-
-// export default Navbar;
-
 import React, { useState } from "react";
 import "./Navbar.css";
 import logo from "../../assets/logo_img.png";
@@ -161,10 +91,11 @@ const Navbar = () => {
 
   return (
     <header className="navbar-wrapper">
-
       <div className="container navbar">
+
         <img className="logo-img" src={logo} alt="Logo" />
 
+        {/* Mobile Open Icon */}
         <img
           src={menu_open}
           alt="menu"
@@ -172,47 +103,44 @@ const Navbar = () => {
           onClick={() => setIsOpen(true)}
         />
 
+        {/* Menu */}
+        <ul className={`nav-menu ${isOpen ? "active" : ""}`}>
+          <img
+            src={menu_close}
+            alt="close"
+            className="nav-mob-close"
+            onClick={closeMenu}
+          />
+
+          <li>
+            <AnchorLink offset={70} href="#home" onClick={closeMenu}>
+              Home
+            </AnchorLink>
+          </li>
+
+          <li>
+            <AnchorLink offset={70} href="#about" onClick={closeMenu}>
+              About
+            </AnchorLink>
+          </li>
+
+          <li>
+            <AnchorLink offset={70} href="#work" onClick={closeMenu}>
+              Projects
+            </AnchorLink>
+          </li>
+
+          <li>
+            <AnchorLink offset={70} href="#contact" onClick={closeMenu}>
+              Contact
+            </AnchorLink>
+          </li>
+        </ul>
+
         <AnchorLink offset={70} href="#contact" className="nav-btn">
           Connect With Me
         </AnchorLink>
       </div>
-
-      {/* 🔥 MOVE MENU OUTSIDE CONTAINER */}
-      <ul className={`nav-menu ${isOpen ? "active" : ""}`}>
-
-        <img
-          src={menu_close}
-          alt="close"
-          className="nav-mob-close"
-          onClick={closeMenu}
-        />
-
-        <li>
-          <AnchorLink offset={70} href="#home" onClick={closeMenu}>
-            Home
-          </AnchorLink>
-        </li>
-
-        <li>
-          <AnchorLink offset={70} href="#about" onClick={closeMenu}>
-            About
-          </AnchorLink>
-        </li>
-
-        <li>
-          <AnchorLink offset={70} href="#work" onClick={closeMenu}>
-            Projects
-          </AnchorLink>
-        </li>
-
-        <li>
-          <AnchorLink offset={70} href="#contact" onClick={closeMenu}>
-            Contact
-          </AnchorLink>
-        </li>
-
-      </ul>
-
     </header>
   );
 };
