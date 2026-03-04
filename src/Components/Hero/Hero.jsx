@@ -50,11 +50,12 @@
 
 
 
-import React from "react";
+import React, { useEffect} from "react";
 import "./Hero.css";
 import profileImg from "../../assets/profile_img2.png";
 import profileImg1 from "../../assets/profile_img3.jpeg";
 import profileImg2 from "../../assets/profile_img4.jpeg";
+import { useState } from "react";
 
 const Hero = () => {
 
@@ -140,7 +141,7 @@ const Hero = () => {
             alt="Vaishnavi"
             className="hero-slide-image"
           />
-          
+
         </div>
 
       </div>
