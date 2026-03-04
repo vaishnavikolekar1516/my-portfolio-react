@@ -114,53 +114,42 @@
 
 @media (max-width: 768px) {
 
-  body {
-    overflow-x: hidden;
-  }
-
-  .navbar {
-    height: 65px;
-    padding: 0 5%;
-  }
-
-  .nav-btn {
-    display: none;
-  }
-
-  .nav-mob-open {
-    display: block;
-    height: 24px;
-    cursor: pointer;
-    z-index: 1100;
-  }
-
   .nav-menu {
+    display: flex !important;          /* ✅ Force display */
+    flex-direction: column !important; /* ✅ Override desktop */
+    justify-content: flex-start;
+    align-items: flex-start;
+
     position: fixed;
     top: 0;
-    right: -260px;          /* ✅ Use exact width */
+    right: -260px;
     width: 260px;
     height: 100vh;
+
     background: #ffffff;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 30px;
     padding: 100px 30px;
-    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.08);
+    gap: 30px;
+
+    list-style: none;
+    margin: 0;
+
     transition: right 0.4s ease;
-    z-index: 1050;          /* ✅ Important */
+    z-index: 2000;                     /* ✅ Make sure above everything */
   }
 
   .nav-menu.active {
-    right: 0;               /* ✅ Slide in */
+    right: 0;
   }
 
-  .nav-mob-close {
+  .nav-menu li {
+    width: 100%;
+  }
+
+  .nav-menu a {
     display: block;
-    position: absolute;
-    right: 20px;
-    top: 25px;
-    width: 22px;
-    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    color: #000;
   }
 
 }
