@@ -85,9 +85,20 @@ import menu_open from "../../assets/menu_open.png";
 import menu_close from "../../assets/menu_close.png";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
 
-  const closeMenu = () => setIsOpen(false);
+  // const closeMenu = () => setIsOpen(false);
+
+    const [menu, setMenu] = useState("home");
+  const menuRef = useRef();
+
+  const openMenu = () =>{
+    menuRef.current.style.right= "0";
+  }
+
+  const closeMenu = () =>{
+  menuRef.current.style.right = "-100%";
+  }
 
   return (
     <header className="navbar-wrapper">
@@ -96,21 +107,29 @@ const Navbar = () => {
         <img className="logo-img" src={logo} alt="Logo" />
 
         {/* Mobile Open Icon */}
-        <img
+        {/* <img
           src={menu_open}
           alt="menu"
           className="nav-mob-open"
           onClick={() => setIsOpen(true)}
-        />
+        /> */}
+
+        <img src={menu_open} onClick={openMenu} alt='' className='nav-mob-open'/>
 
         {/* Menu */}
-        <ul className={`nav-menu ${isOpen ? "active" : ""}`}>
-          <img
+        {/* <ul className={`nav-menu ${isOpen ? "active" : ""}`}> */}
+
+        <ul ref={menuRef} className='nav-menu'>
+
+
+          {/* <img
             src={menu_close}
             alt="close"
             className="nav-mob-close"
             onClick={closeMenu}
-          />
+          /> */}
+
+          <img src={menu_close} onClick={closeMenu} alt="" className="nav-mob-close" />
 
           <li>
             <AnchorLink offset={70} href="#home" onClick={closeMenu}>
