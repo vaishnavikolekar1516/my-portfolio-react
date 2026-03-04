@@ -135,9 +135,9 @@
   color: #7c3aed;     /* Keep purple hover */
 }
 
-.navbar-wrapper {
+/* .navbar-wrapper {
     overflow-x: hidden;       /* ✅ Stop horizontal scroll */
-  }
+  } */
 
   body {
     overflow-x: hidden;       /* ✅ Safety fix */
