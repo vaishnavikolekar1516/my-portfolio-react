@@ -1,19 +1,139 @@
-/* ================= MOBILE ================= */
+/* ================= WRAPPER ================= */
+
+.navbar-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+}
+
+/* ✨ Subtle Gradient Line at Bottom */
+.navbar-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #7c3aed, #a78bfa, #7c3aed);
+  opacity: 0.3;
+}
+
+/* ================= MAIN NAV ================= */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;
+}
+
+/* ================= LOGO ================= */
+
+.logo-img {
+  height: 60px;
+  width: auto;
+  transition: 0.4s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 8px rgba(124, 58, 237, 0.4));
+}
+
+/* ================= MENU ================= */
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 50px;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* ✨ Gradient Underline Animation */
+
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #7c3aed, #a78bfa);
+  transition: width 0.4s ease;
+  border-radius: 10px;
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
+}
+
+.nav-menu a:hover {
+  color: #7c3aed;
+}
+
+/* ================= CONNECT BUTTON ================= */
+
+.nav-btn {
+  padding: 12px 28px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #7c3aed, #a78bfa);
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.25);
+}
+
+/* ✨ Shine Effect */
+.nav-btn::after {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  top: 0;
+  left: -40%;
+  transform: skewX(-20deg);
+  transition: 0.5s;
+}
+
+.nav-btn:hover::after {
+  left: 120%;
+}
+
+.nav-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(124, 58, 237, 0.4);
+}
+
+/* ================= MOBILE ICONS ================= */
 
 .nav-mob-open,
 .nav-mob-close {
   display: none;
 }
 
+/* ================= MOBILE ================= */
+
 @media (max-width: 768px) {
-
-  .navbar {
-    height: 64px;
-  }
-
-  .logo-img {
-    height: 40px;
-  }
 
   .nav-btn {
     display: none;
@@ -21,7 +141,7 @@
 
   .nav-mob-open {
     display: block;
-    height: 20px;
+    height: 22px;
     cursor: pointer;
   }
 
@@ -31,32 +151,27 @@
     right: -100%;
     flex-direction: column;
     align-items: flex-start;
-    gap: 28px;
-    background: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(18px);
-    width: 260px;
+    gap: 35px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    width: 280px;
     height: 100vh;
-    padding-top: 100px;
-    padding-left: 32px;
-    transition: right 0.35s ease;
-    box-shadow: -15px 0 50px rgba(0, 0, 0, 0.08);
-  }
-
-  /* When menu active */
-  .nav-menu.active {
-    right: 0;
+    padding-top: 120px;
+    padding-left: 40px;
+    transition: right 0.4s ease;
+    box-shadow: -20px 0 60px rgba(0, 0, 0, 0.08);
   }
 
   .nav-menu a {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .nav-mob-close {
     display: block;
     position: absolute;
-    right: 22px;
-    top: 28px;
-    width: 22px;
+    right: 25px;
+    top: 35px;
+    width: 24px;
     cursor: pointer;
   }
 }
