@@ -114,6 +114,7 @@
   .navbar {
     height: 65px;
     padding: 0 5%;
+    box-sizing: border-box;
   }
 
   .nav-btn {
@@ -133,6 +134,14 @@
 .nav-menu a:hover {
   color: #7c3aed;     /* Keep purple hover */
 }
+
+.navbar-wrapper {
+    overflow-x: hidden;       /* ✅ Stop horizontal scroll */
+  }
+
+  body {
+    overflow-x: hidden;       /* ✅ Safety fix */
+  }
 
   .nav-menu {
     position: fixed;
