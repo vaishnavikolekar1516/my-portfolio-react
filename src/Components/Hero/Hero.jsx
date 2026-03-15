@@ -113,7 +113,7 @@ const Hero = () => {
                 rel='noopener noreferrer'
                 className="btn-primary"
              >
-                Let's Connect
+               Explore My Profile
              </a>
             <a href='/Vaishnavi_Kolekar.pdf' 
                target='_blank' 

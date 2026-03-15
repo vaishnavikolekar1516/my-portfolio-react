@@ -1,3 +1,81 @@
+// import React, { useState } from "react";
+// import "./Footer.css";
+// import logo from "../../assets/logo_img.png";
+// import ComingSoon from "../Comingsoon/ComingSoon.jsx";
+// import AnchorLink from "react-anchor-link-smooth-scroll";
+
+// const Footer = () => {
+//   const [showModal, setShowModal] = useState(false);
+//   const [modalTitle, setModalTitle] = useState("");
+
+//   const handleOpen = (title) => {
+//     setModalTitle(title);
+//     setShowModal(true);
+//   };
+
+//   return (
+//     <footer className="footer-section">
+//       <div className="footer-container">
+//         <div className="footer">
+
+//           {/* TOP */}
+//           <div className="footer-top">
+//             <div className="footer-left">
+//               <img src={logo} alt="Logo" />
+//               <p>
+//                 Creating meaningful and user-centric web experiences as a
+//                 MERN Stack Developer — driven by curiosity and passion
+//                 for continuous growth.
+//               </p>
+//             </div>
+
+//             <div className="footer-right">
+//               <h4>Stay Updated</h4>
+
+//               <div className="footer-input-group">
+//                 <input type="email" placeholder="Enter your email" />
+//                 <button>Subscribe</button>
+//               </div>
+//             </div>
+//           </div>
+
+//           <hr />
+
+//           {/* BOTTOM */}
+//           <div className="footer-bottom">
+//             <p>© 2025 Vaishnavi Kolekar. All rights reserved.</p>
+
+//             <div className="footer-links">
+//               <span onClick={() => handleOpen("Terms of Services")}>
+//                 Terms of Services
+//               </span>
+
+//               <span onClick={() => handleOpen("Privacy Policy")}>
+//                 Privacy Policy
+//               </span>
+
+//               <AnchorLink offset={50} href="#contact">
+//                 Connect with me
+//               </AnchorLink>
+//             </div>
+//           </div>
+
+//         </div>
+//       </div>
+
+//       {showModal && (
+//         <ComingSoon
+//           title={modalTitle}
+//           onClose={() => setShowModal(false)}
+//         />
+//       )}
+//     </footer>
+//   );
+// };
+
+// export default Footer;
+
+
 import React, { useState } from "react";
 import "./Footer.css";
 import logo from "../../assets/logo_img.png";
@@ -20,6 +98,7 @@ const Footer = () => {
 
           {/* TOP */}
           <div className="footer-top">
+
             <div className="footer-left">
               <img src={logo} alt="Logo" />
               <p>
@@ -30,13 +109,31 @@ const Footer = () => {
             </div>
 
             <div className="footer-right">
-              <h4>Stay Updated</h4>
+              <h4>Direct Message</h4>
 
-              <div className="footer-input-group">
-                <input type="email" placeholder="Enter your email" />
-                <button>Subscribe</button>
+              <div className="footer-dm-buttons">
+
+                {/* WhatsApp */}
+                <a
+                  href="https://wa.me/917400432180?text=Hello%20Vaishnavi%2C%20I%20visited%20your%20portfolio."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="dm-btn whatsapp"
+                >
+                  DM on WhatsApp
+                </a>
+
+                {/* Email */}
+                <a
+                  href="mailto:vaishnavikolekar1615@gmail.com"
+                  className="dm-btn email"
+                >
+                  Send Email
+                </a>
+
               </div>
             </div>
+
           </div>
 
           <hr />
@@ -46,6 +143,7 @@ const Footer = () => {
             <p>© 2025 Vaishnavi Kolekar. All rights reserved.</p>
 
             <div className="footer-links">
+
               <span onClick={() => handleOpen("Terms of Services")}>
                 Terms of Services
               </span>
@@ -57,6 +155,7 @@ const Footer = () => {
               <AnchorLink offset={50} href="#contact">
                 Connect with me
               </AnchorLink>
+
             </div>
           </div>
 
