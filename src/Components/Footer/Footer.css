@@ -42,7 +42,7 @@
 .footer-top {
   display: flex;
   justify-content: space-between;
-  gap: 60px;   /* reduced */
+  gap: 40px;   /* reduced */
 }
 
 /* LEFT */
@@ -112,7 +112,7 @@
 @media (max-width: 1024px) {
   .footer-top {
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
   }
 
   .footer-bottom {

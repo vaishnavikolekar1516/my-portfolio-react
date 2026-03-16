@@ -140,7 +140,7 @@ const Footer = () => {
 
           {/* BOTTOM */}
           <div className="footer-bottom">
-            <p>© 2025 Vaishnavi Kolekar. All rights reserved.</p>
+            <p>© 2026 Vaishnavi Kolekar. All rights reserved.</p>
 
             <div className="footer-links">
 
