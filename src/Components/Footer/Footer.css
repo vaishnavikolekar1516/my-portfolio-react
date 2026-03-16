@@ -2,7 +2,7 @@
 
 .footer-section {
   background: linear-gradient(180deg, #f8f6ff 0%, #ffffff 100%);
-  padding: 50px 50px;   /* reduced space */
+  padding: 25px 50px 40px;   /* reduced space */
   position: relative;
   overflow: hidden;
 }
@@ -42,7 +42,7 @@
 .footer-top {
   display: flex;
   justify-content: space-between;
-  gap: 40px;   /* reduced */
+  gap: 60px;   /* reduced */
 }
 
 /* LEFT */
@@ -112,7 +112,7 @@
 @media (max-width: 1024px) {
   .footer-top {
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
   }
 
   .footer-bottom {
