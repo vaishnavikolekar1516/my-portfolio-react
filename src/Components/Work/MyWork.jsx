@@ -11,7 +11,7 @@ const MyWork = () => {
       img: Portfolio,
       title: "Portfolio Website",
       tech: ["React", "CSS", "Responsive"],
-      github: "https://github.com/vaishnavikolekar1516/portfolio-react"
+      github: "https://github.com/vaishnavikolekar1516/my-portfolio-react"
     },
     {
       img: ToDoApp,
