@@ -1,5 +1,9 @@
 /* ================= WRAPPER ================= */
 
+html, body {
+  overflow-x: hidden;
+}
+
 .navbar-wrapper {
   position: sticky;
   top: 0;
@@ -171,4 +175,12 @@
   body.menu-open {
     overflow: hidden;
   }
+}
+
+body {
+  position: relative;
+}
+
+.container {
+  overflow-x: hidden;
 }
