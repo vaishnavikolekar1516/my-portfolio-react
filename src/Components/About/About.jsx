@@ -17,7 +17,7 @@ const About = () => {
         <div className="about-content">
 
           <h2>
-            MERN <span>Stack Developer</span>
+            MERN Stack <span>Developer</span>
           </h2>
 
           <p>

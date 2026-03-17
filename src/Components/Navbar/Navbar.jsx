@@ -77,7 +77,7 @@
 
 
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 import logo from "../../assets/logo_img.png";
 import AnchorLink from "react-anchor-link-smooth-scroll";
@@ -88,6 +88,14 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const closeMenu = () => setIsOpen(false);
+
+  useEffect(() => {
+  if (isOpen) {
+    document.body.classList.add("menu-open");
+  } else {
+    document.body.classList.remove("menu-open");
+  }
+}, [isOpen]);
 
   return (
     <header className="navbar-wrapper">

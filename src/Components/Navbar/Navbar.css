@@ -27,8 +27,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;              /* Reduced from 90 */
-  padding: 0 30px;            /* Reduced side padding */
+  height: 80px;
+  padding: 0 30px;
 }
 
 /* ================= LOGO ================= */
@@ -48,8 +48,8 @@
   display: flex;
   align-items: center;
   list-style: none;
-  gap: 39px;                 /* Reduced spacing */
-  font-size: 17px;           /* Increased font */
+  gap: 39px;
+  font-size: 17px;
   font-weight: 500;
 }
 
@@ -61,7 +61,6 @@
 }
 
 /* Underline animation */
-
 .nav-menu a::after {
   content: "";
   position: absolute;
@@ -128,14 +127,14 @@
   }
 
   .nav-menu a {
-  color: #000;        /* Force black text */
-}
+    color: #000;
+  }
 
-.nav-menu a:hover {
-  color: #7c3aed;     /* Keep purple hover */
-}
+  .nav-menu a:hover {
+    color: #7c3aed;
+  }
 
-
+  /* ✅ FIXED MENU (no UI change, only behavior fix) */
   .nav-menu {
     position: fixed;
     top: 0;
@@ -150,7 +149,8 @@
     padding-left: 30px;
     transition: right 0.4s ease;
     box-shadow: -10px 0 40px rgba(0, 0, 0, 0.08);
-    font-size: 18px;      /* Bigger mobile font */
+    font-size: 18px;
+    z-index: 1001; /* ✅ added */
   }
 
   /* When menu opens */
@@ -165,5 +165,10 @@
     top: 25px;
     width: 22px;
     cursor: pointer;
+  }
+
+  /* ✅ ADD THIS (fix grey background issue) */
+  body.menu-open {
+    overflow: hidden;
   }
 }
