@@ -140,9 +140,9 @@ const Footer = () => {
 
           {/* BOTTOM */}
           <div className="footer-bottom">
-            <p>© 2026 Vaishnavi Kolekar. All rights reserved.</p>
+            <p>© 2025 Vaishnavi Kolekar. All rights reserved.</p>
 
-            <div className="footer-links">
+            {/* <div className="footer-links">
 
               <span onClick={() => handleOpen("Terms of Services")}>
                 Terms of Services
@@ -156,7 +156,7 @@ const Footer = () => {
                 Connect with me
               </AnchorLink>
 
-            </div>
+            </div> */}
           </div>
 
         </div>
