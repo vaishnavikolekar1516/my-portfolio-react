@@ -11,19 +11,22 @@ const MyWork = () => {
       img: Portfolio,
       title: "Portfolio Website",
       tech: ["React", "CSS", "Responsive"],
-      github: "https://github.com/vaishnavikolekar1516/my-portfolio-react"
+      github: "https://github.com/vaishnavikolekar1516/my-portfolio-react",
+      live: "https://vaishnavikolekar-portfolio.vercel.app/"
     },
     {
       img: ToDoApp,
       title: "To Do Application",
       tech: ["React", "LocalStorage"],
-      github: "https://github.com/vaishnavikolekar1516/to-do-app"
+      github: "https://github.com/vaishnavikolekar1516/to-do-app",
+      live: "https://to-do-app-kohl-eight.vercel.app/"
     },
     {
       img: LMS,
       title: "Learning Management System",
       tech: ["MongoDB", "Express", "React", "Node"],
-      github: "https://github.com/vaishnavikolekar1516/LMS"
+      github: "https://github.com/vaishnavikolekar1516/LMS",
+      live: "https://codesphere-lms.vercel.app/"
     }
   ]
 
@@ -52,6 +55,8 @@ const MyWork = () => {
                   ))}
                 </div>
 
+                <div className="project-buttons">
+
                 <a 
                   href={project.github}
                   target="_blank"
@@ -60,6 +65,17 @@ const MyWork = () => {
                 >
                   View on GitHub
                 </a>
+
+                <a 
+                  href={project.live}
+                  target="_blank"
+                  rel="noreferrer"
+                  className='project-btn live'
+                >
+                  Live Demo
+                </a>
+
+                </div>
               </div>
 
             </div>

@@ -136,3 +136,14 @@
   }
 
 }
+
+.icon {
+  display: inline-flex;   /* 🔥 important */
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #7c3aed;
+  background: #f3f0ff;
+  padding: 8px;
+  border-radius: 8px;
+}

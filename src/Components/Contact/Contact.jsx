@@ -131,17 +131,17 @@ const Contact = () => {
             <div className="contact-info">
 
               <div className="info-item">
-                <FaEnvelope className="icon" />
+                <span className="icon">📧</span>
                 <span>vaishnavikolekar1615@gmail.com</span>
               </div>
 
               <div className="info-item">
-                <FaPhone className="icon" />
+                <span className="icon">📞</span>
                 <span>+91 7400432180</span>
               </div>
 
               <div className="info-item">
-                <FaMapMarkerAlt className="icon" />
+                <span className="icon">📍</span>
                 <span>Panvel, Navi Mumbai</span>
               </div>
 

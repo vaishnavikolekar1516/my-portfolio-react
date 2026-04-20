@@ -156,6 +156,13 @@
 
 /* ================= BUTTON ================= */
 
+.project-buttons {
+  margin-top: auto;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
 .project-btn {
   margin-top: auto;
   align-self: flex-start;
